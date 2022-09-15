@@ -13,21 +13,18 @@
 // 120
 $n = 5;
 $answer = 1;
-function solution(){
-
-
-    function DFS($v){
+function solution()
+{
+    function DFS($v)
+    {
         global $answer;
-        if($v ==1){
+        if ($v == 1) {
             return 1;
-        }else {
-           return $answer = $v*DFS($v-1);
-    
+        } else {
+            return $answer = $v * DFS($v - 1);
         }
-
-
     }
-    
+
     DFS(5);
     global $answer;
     return $answer;
